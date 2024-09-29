@@ -13,7 +13,7 @@ with st.expander('Data'):
 
   st.write('**X**')
   X = df.drop('species', axis = 1)
-  X
+  gX
 
   st.write('**Y**')
   Y = df.species
@@ -29,3 +29,6 @@ with st.sidebar:
   island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
   gender = st.selectbox('Gender', ('Male', 'Female'))
   bill_length_mm = st.slider('Bill length (mm)', 32.1, 59.6, 42.9)
+  bill_depth_mm = st.slider('Bill depth (mm)', 13.1, 21.5, 14.2)
+  flipper_length_mm = st.slider('Flipper length (mm)', 172.0, 231.0, 201.0)
+  body_mass_g = st.slider('Body mass (g)', 2700, 6300, 4207 )
