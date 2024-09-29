@@ -19,4 +19,4 @@ with st.expander('Data'):
   Y = df.species
   Y
 
-with st.expander('Data visualisation')
+with st.expander('Data visualisation'):
