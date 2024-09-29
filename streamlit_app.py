@@ -35,14 +35,17 @@ with st.sidebar:
 
   # create a dataframe for the input features
   data = {'island': island,
-         'bill_length_mm': bill_length_mm,
-         'bill_depth_mm': bill_depth_mm,
-         'flipper_length_mm': flipper_length_mm,
-         'body_mass_g': body_mass_g,
-         'gender': gender}
+          'bill_length_mm': bill_length_mm,
+          'bill_depth_mm': bill_depth_mm,
+          'flipper_length_mm': flipper_length_mm,
+          'body_mass_g': body_mass_g,
+          'sex': gender}
+  input_df = pd.DataFrame(data, index=[0])
+  input_penguins = pd.concat([input_df, X_raw], axis=0)
 
-  input_df = pd.DataFrame(data, index=0)
-  input_penguins = pd.concat([input_df, X], axis=0)
-
-input_df
+with st.expander('Input features'):
+  st.write('**Input penguin**')
+  input_df
+  st.write('**Combined penguins data**')
+  input_penguins
   
