@@ -18,3 +18,5 @@ with st.expander('Data'):
   st.write('**Y**')
   Y = df.species
   Y
+
+with st.expander('Data visualisation')
